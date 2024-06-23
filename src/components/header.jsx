@@ -3,10 +3,18 @@ import '../index.css';
 import React from 'react';
 
 
-const Header = () => {
+const Header = ({text}) => {
+  
   return (
-    <div className="head">
-      <h1>Veranda  coffe</h1>
+    <div className="head-bar">
+      <div className="tooo">
+        
+        
+        <div>
+          <h1>{text} </h1>
+        </div>
+        
+      </div>
     </div>
   );
 }

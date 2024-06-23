@@ -5,10 +5,41 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  background-color: #38220f;
 }
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
 
-h1{font-size:34px; 
+h1{font-size:40px; 
 letter-spacing:1px;
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-style: normal;
+font-family: "Sedgwick Ave Display", cursive;
+text-align:center;
+font-weight:900;
+display:block;
+color:blanchedalmond;
+margin-top: 70px;
 
+}
+.head-bar{
+  
+  top: 0;
+  height: 170px;
+  background: linear-gradient(to bottom right , #f2cf8c,#7e4000,#38220f);
+display: flex;
+justify-content: center;
+  text-align:center;
+  width: calc("100%-240px");
+  margin-left: 240px;
+  
+}
+.tooo{
+width: 100%;
+background-image: url(components/media/coffe-head.png);
+  background-size:40%;
+  background-position: center;
+  background-repeat: no-repeat;
+opacity: 0.9;
+  
 }
