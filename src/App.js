@@ -7,6 +7,8 @@ import {
 import Root from "./root";
 import { createTheme } from "@mui/material";
 import HomePage from "./pages/home";
+import Jus from "./pages/jus";
+import Notfound from "./pages/404";
 
 const theme = createTheme({
   palette: {
@@ -29,6 +31,11 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root />}>
       <Route path="/" element={<HomePage />} />
+      <Route path="/Jus" element={<Jus />} />
+
+
+      <Route path="*" element={<Notfound/>} />
+
     </Route>
   )
 );

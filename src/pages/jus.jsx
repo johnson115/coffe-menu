@@ -1,13 +1,12 @@
-import * as React from "react";
+
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import '../index.css';
 import Header from "../components/header";
+import React from 'react';
 
-
-const HomePage = () => {
-
+const Jus = () => {
   return (
     <>
       
@@ -35,8 +34,8 @@ const HomePage = () => {
       
     </>
   );
-  
-};
+}
+
 const itemData = [
   {
     img: 'https://images.stockcake.com/public/b/b/e/bbe52898-7026-4a3d-a79a-b051c2e47ddb_large/steaming-coffee-cup-stockcake.jpg',
@@ -110,4 +109,5 @@ const itemData = [
     cols: 2,
   },
 ];
-export default HomePage;
+
+export default Jus;

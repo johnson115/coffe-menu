@@ -10,11 +10,15 @@ import CoffeeIcon from '@mui/icons-material/Coffee';
 import WineBarIcon from '@mui/icons-material/WineBar';
 import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
 import HomeIcon from '@mui/icons-material/Home';
-import {useTheme} from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 
 import React from "react";
 import { NavLink } from "react-router-dom";
+
+
+
 const Theme = createTheme({
   palette:{
     mode:"dark",
@@ -44,10 +48,11 @@ const listStyle = {
 }
 const drawerWidth = 240;
 const Drawerr = () => {
-  const naving=[{text:"Home" , icon:<HomeIcon />},{text:"Coffe" , icon:<CoffeeIcon />},
-    {text:'Jus',icon:<WineBarIcon />},
-    {text:"Contact", icon:<ContactPhoneIcon />}]
-  const theeme=useTheme();
+  const naving=[{text:"Home" , icon:<HomeIcon /> , path:"/"},{text:"Coffe" , icon:<CoffeeIcon />,path:"/Coffe"},
+    {text:'Jus',icon:<WineBarIcon />,path:"/jus"},
+    {text:"Contact", icon:<ContactPhoneIcon />,path:"/Contact-us"}, ]
+    const Navigate=useNavigate();
+    const currentLocation=useLocation();
   return (
 
     <ThemeProvider theme={Theme}>
@@ -76,8 +81,13 @@ const Drawerr = () => {
     <List>
       {naving.map((item) => {
         return(
-<ListItem disablePadding>
-      <ListItemButton component={NavLink}>
+<ListItem disablePadding
+sx={{
+  backgroundColor:currentLocation.pathname === item.path ? Theme.palette.main : null,
+}}>
+      <ListItemButton  onClick={() => {
+        Navigate(item.path);
+      }}>
       {item.icon}
       <ListItemText sx={{textAlign:"center"}} primary={item.text} />
       </ListItemButton>
