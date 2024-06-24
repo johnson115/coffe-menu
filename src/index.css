@@ -42,4 +42,54 @@ background-image: url(components/media/coffe-head.png);
   background-repeat: no-repeat;
 opacity: 0.9;
   
+}.contained{
+  display: block;
+  position:absolute;
+  width: 700px;
+}
+.empty{
+  display: flex;
+justify-content: center;
+  text-align:center;
+  width: calc("100%-240px");
+  margin-left: 240px;
+}
+img{
+  display: block;
+  
+  opacity:0.7;
+}
+.home{
+  padding-top:40px;
+  top:0;
+  width: calc("100%-240px");
+  margin-left: 240px;
+  height:100vh;
+background-image: url(https://img.pikbest.com/wp/202347/waiter-hand-3d-illustration-of-a-tray-carrying-cartoon-s_9760200.jpg!w700wp);
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+opacity: 0.9;
+}
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+.title{
+  margin-top:170px;
+  font-family: "Nabla", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "EDPT" 100,
+    "EHLT" 12;
+    
+  
+
+}
+.title h1{
+  color:rgba(54, 19, 3, 0.894);
+  animation-duration: 1.7s;
+}
+.button{
+  display:flex;
+    justify-content: center;
 }
