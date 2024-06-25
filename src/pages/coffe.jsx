@@ -13,7 +13,7 @@ const Coffe = () => {
   
     <ImageList cols={3} sx={{
        background:'linear-gradient(to right top , #f2cf8c,#7e4000,#38220f)', 
-       width:`calc(100%-240px)`, ml:{xs:0,md:"240px",},mt:0,padding:"40px", height: "100%" }}>
+       width:"100%", ml:0,mt:0,padding:"40px", height: "100%", gap:"20px" }}>
     {itemData.map((item) => (
       <ImageListItem key={item.img}>
         <img
@@ -38,7 +38,7 @@ const Coffe = () => {
 const itemData = [
   {
     img: 'https://images.stockcake.com/public/b/b/e/bbe52898-7026-4a3d-a79a-b051c2e47ddb_large/steaming-coffee-cup-stockcake.jpg',
-    title: 'American coffe',
+    title: 'American ',
     author: 'price : 1.700 TND',
     rows: 2,
     cols: 2,
@@ -46,12 +46,12 @@ const itemData = [
   },
   {
     img: 'https://images.stockcake.com/public/7/2/3/7238e9d1-d50b-4059-8ff2-23de2dcea922_large/espresso-pouring-freshly-stockcake.jpg',
-    title: 'Express Coffe',
+    title: 'Express ',
     author: 'price : 1.700 TND',
   },
   {
     img: 'https://images.unsplash.com/photo-1589224637274-2a30864d41b0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YW1lcmljYW4lMjBjb2ZmZXxlbnwwfHwwfHx8Mg%3D%3D',
-    title: 'Allonje Coffe',
+    title: 'Allonje ',
     author: 'price : 1.700 TND',
   },
   {

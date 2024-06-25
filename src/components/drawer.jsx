@@ -48,7 +48,7 @@ const listStyle = {
   backgroundColor: '#f2cf8c'
 }
 const drawerWidth = 240;
-const Drawerr = ({Varient,setVarient}) => {
+const Drawerr = ({Varient,setVarient,Displays,setShowme}) => {
   const naving=[{text:"Home" , icon:<HomeIcon /> , path:"/"},{text:"Coffe" , icon:<CoffeeIcon />,path:"/Coffe"},
     {text:'Jus',icon:<WineBarIcon />,path:"/jus"},
     {text:"Contact", icon:<ContactPhoneIcon />,path:"/Contact-us"}, ]
@@ -62,7 +62,7 @@ const Drawerr = ({Varient,setVarient}) => {
     sx={{
       width: drawerWidth,
       flexShrink: 0,
-      display:"none",
+      display:Displays,
       '& .MuiDrawer-paper': {
         width: drawerWidth,
         boxSizing: 'border-box'
@@ -73,6 +73,7 @@ const Drawerr = ({Varient,setVarient}) => {
     variant={Varient}
     onClose={() => {
       setVarient("permanent");
+      setShowme("none")
     }}
     anchor="left"
     

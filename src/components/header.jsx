@@ -5,16 +5,16 @@ import IconButton from "@mui/material/IconButton";
 import { useLocation } from "react-router-dom";
 import { Box } from "@mui/material";
 
-const Header = ({ text, setvarient }) => {
+const Header = ({ text, setvarient ,showme}) => {
   const Thislocation = useLocation();
 
   return (
     <>
       <Box
         className="head-bar"
-        sx={{ display: Thislocation.pathname === "/" ? "none" : "flex" }}
+        sx={{ display: Thislocation.pathname === "/" || Thislocation.pathname === "/Contact-us" ? "none" : "flex" }}
       >
-        <IconButton
+        <IconButton  
           size="large"
           edge="start"
           color="inherit"
@@ -22,6 +22,7 @@ const Header = ({ text, setvarient }) => {
           sx={{ ml: 2 }}
           onClick={() => {
             setvarient("temporary");
+            showme("block");
           }}
         >
           <MenuIcon sx={{ fontSize: "30px", fontWeight: 700, top: 0 }} />

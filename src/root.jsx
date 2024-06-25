@@ -6,14 +6,15 @@ import Header from "./components/header";
 import { useState } from "react";
 const Root = () => {
   const [Varient, setVarient] = useState("permanent");
-  
+  const [Showme, setShowme] = useState("none");
   return (
     <>
-      <Header setvarient={setVarient}  text="Our Menu" />
+      <Header setvarient={setVarient} showme={setShowme} text="Our Menu" />
       <Drawerr
-        
+        Displays={Showme}
         setVarient={setVarient}
         Varient={Varient}
+        setShowme={setShowme}
         
       />
       <Box>

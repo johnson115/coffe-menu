@@ -2,7 +2,7 @@ import * as React from "react";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import ".././index.css";
-
+import { useNavigate } from "react-router-dom";
 import "animate.css";
 import SendIcon from '@mui/icons-material/Send';
 
@@ -14,6 +14,7 @@ const HomePage = (setDraweer) => {
       backgroundColor: theme.palette.warning.light,
     },
   }));
+  const Go=useNavigate()
   return (
     
     <div className="home">
@@ -22,8 +23,9 @@ const HomePage = (setDraweer) => {
           Welcome to our coffee
         </h1>
         <div className="button">
-          <ColorButton className="animate__animated animate__backInUp" variant="contained" endIcon={<SendIcon />} onClick={() => {
-            setDraweer("block")
+          <ColorButton 
+           className="animate__animated animate__backInUp" variant="contained" endIcon={<SendIcon />} onClick={() => {
+            Go("/Coffe");
           }}>
             {" "}
             Go to Our Menu

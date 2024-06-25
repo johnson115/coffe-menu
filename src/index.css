@@ -26,7 +26,7 @@ h1 {
 .tooo {
   width: 100%;
   background-image: url(components/media/coffe-head.png);
-  background-size: 40%;
+  background-size: 70%;
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.9;
@@ -51,8 +51,8 @@ img {
 .home {
   padding-top: 40px;
   top: 0;
-  width: calc("100%-240px");
-  margin-left: 240px;
+  width: 100%;
+  
   height: 100vh;
   background-image: url(https://img.pikbest.com/wp/202347/waiter-hand-3d-illustration-of-a-tray-carrying-cartoon-s_9760200.jpg!w700wp);
   background-size: cover;
@@ -80,17 +80,4 @@ img {
 .animate__backInRight {
   animation-duration: 1.7s;
 }
-@media screen and (max-width: 900px) {
-  .home {
-    width: 100%;
-    margin-left: 0;
-  }
-  .empty {
-    width: 100%;
-    margin-left: 0;
-  }
-  .head-bar {
-    width: 100%;
-    margin-left: 0;
-  }
-}
+
