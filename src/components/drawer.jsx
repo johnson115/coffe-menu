@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 
+
 import React from "react";
 
 
@@ -47,7 +48,7 @@ const listStyle = {
   backgroundColor: '#f2cf8c'
 }
 const drawerWidth = 240;
-const Drawerr = () => {
+const Drawerr = ({Varient,setVarient}) => {
   const naving=[{text:"Home" , icon:<HomeIcon /> , path:"/"},{text:"Coffe" , icon:<CoffeeIcon />,path:"/Coffe"},
     {text:'Jus',icon:<WineBarIcon />,path:"/jus"},
     {text:"Contact", icon:<ContactPhoneIcon />,path:"/Contact-us"}, ]
@@ -61,14 +62,18 @@ const Drawerr = () => {
     sx={{
       width: drawerWidth,
       flexShrink: 0,
-      
+      display:"none",
       '& .MuiDrawer-paper': {
         width: drawerWidth,
         boxSizing: 'border-box'
       },
     }}
+    open={true}
     style={listStyle }
-    variant="permanent"
+    variant={Varient}
+    onClose={() => {
+      setVarient("permanent");
+    }}
     anchor="left"
     
   >

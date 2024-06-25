@@ -1,0 +1,11 @@
+.head-bar {
+  top: 0;
+  height: 170px;
+  background: linear-gradient(to bottom right, #f2cf8c, #7e4000, #38220f);
+  
+  justify-content: center;
+  border:4px solid red ;
+  text-align: center;
+  width: calc("100%-240px");
+  margin-left: 240px;
+}

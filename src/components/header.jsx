@@ -1,22 +1,39 @@
+import "./styles/head.css";
+import React from "react";
+import MenuIcon from "@mui/icons-material/Menu";
+import IconButton from "@mui/material/IconButton";
+import { useLocation } from "react-router-dom";
+import { Box } from "@mui/material";
 
-import '../index.css';
-import React from 'react';
+const Header = ({ text, setvarient }) => {
+  const Thislocation = useLocation();
 
-
-const Header = ({text}) => {
-  
   return (
-    <div className="head-bar">
-      <div className="tooo">
-        
-        
-        <div>
-          <h1>{text} </h1>
+    <>
+      <Box
+        className="head-bar"
+        sx={{ display: Thislocation.pathname === "/" ? "none" : "flex" }}
+      >
+        <IconButton
+          size="large"
+          edge="start"
+          color="inherit"
+          aria-label="menu"
+          sx={{ ml: 2 }}
+          onClick={() => {
+            setvarient("temporary");
+          }}
+        >
+          <MenuIcon sx={{ fontSize: "30px", fontWeight: 700, top: 0 }} />
+        </IconButton>
+        <div className="tooo animate__animated animate__rollIn">
+          <div>
+            <h1 className="animate__animated animate__flipInX">{text} </h1>
+          </div>
         </div>
-        
-      </div>
-    </div>
+      </Box>
+    </>
   );
-}
+};
 
 export default Header;

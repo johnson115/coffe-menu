@@ -3,17 +3,17 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import '../index.css';
-import Header from "../components/header";
+
 import React from 'react';
 
 const Coffe = () => {
   return (
-    <>
+    < >
       
-    <Header text="Our Menu"/>
+  
     <ImageList cols={3} sx={{
        background:'linear-gradient(to right top , #f2cf8c,#7e4000,#38220f)', 
-       width:` calc(100%-240px)`,ml:"240px",mt:0,padding:"40px", height: "100%" }}>
+       width:`calc(100%-240px)`, ml:{xs:0,md:"240px",},mt:0,padding:"40px", height: "100%" }}>
     {itemData.map((item) => (
       <ImageListItem key={item.img}>
         <img

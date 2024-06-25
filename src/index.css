@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -9,87 +9,88 @@ body {
   padding: 0;
   background-color: #38220f;
 }
-@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap");
 
-h1{font-size:40px; 
-letter-spacing:1px;
-font-style: normal;
-font-family: "Sedgwick Ave Display", cursive;
-text-align:center;
-font-weight:900;
-display:block;
-color:blanchedalmond;
-margin-top: 70px;
+h1 {
+  font-size: 40px;
+  letter-spacing: 1px;
+  font-style: normal;
+  font-family: "Sedgwick Ave Display", cursive;
+  text-align: center;
+  font-weight: 900;
+  display: block;
+  color: blanchedalmond;
+  margin-top: 70px;
+}
 
-}
-.head-bar{
-  
-  top: 0;
-  height: 170px;
-  background: linear-gradient(to bottom right , #f2cf8c,#7e4000,#38220f);
-display: flex;
-justify-content: center;
-  text-align:center;
-  width: calc("100%-240px");
-  margin-left: 240px;
-  
-}
-.tooo{
-width: 100%;
-background-image: url(components/media/coffe-head.png);
-  background-size:40%;
+.tooo {
+  width: 100%;
+  background-image: url(components/media/coffe-head.png);
+  background-size: 40%;
   background-position: center;
   background-repeat: no-repeat;
-opacity: 0.9;
-  
-}.contained{
+  opacity: 0.9;
+}
+.contained {
   display: block;
-  position:absolute;
+  position: absolute;
   width: 700px;
 }
-.empty{
+.empty {
   display: flex;
-justify-content: center;
-  text-align:center;
+  justify-content: center;
+  text-align: center;
   width: calc("100%-240px");
   margin-left: 240px;
 }
-img{
+img {
   display: block;
-  
-  opacity:0.7;
+
+  opacity: 0.7;
 }
-.home{
-  padding-top:40px;
-  top:0;
+.home {
+  padding-top: 40px;
+  top: 0;
   width: calc("100%-240px");
   margin-left: 240px;
-  height:100vh;
-background-image: url(https://img.pikbest.com/wp/202347/waiter-hand-3d-illustration-of-a-tray-carrying-cartoon-s_9760200.jpg!w700wp);
-  background-size:cover;
+  height: 100vh;
+  background-image: url(https://img.pikbest.com/wp/202347/waiter-hand-3d-illustration-of-a-tray-carrying-cartoon-s_9760200.jpg!w700wp);
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-opacity: 0.9;
+  opacity: 0.9;
 }
-@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
-.title{
-  margin-top:170px;
+@import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap");
+.title {
+  margin-top: 170px;
   font-family: "Nabla", system-ui;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings:
-    "EDPT" 100,
-    "EHLT" 12;
-    
-  
-
+  font-variation-settings: "EDPT" 100, "EHLT" 12;
 }
-.title h1{
-  color:rgba(54, 19, 3, 0.894);
+.title h1 {
+  color: rgba(54, 19, 3, 0.894);
   animation-duration: 1.7s;
 }
-.button{
-  display:flex;
-    justify-content: center;
+.button {
+  display: flex;
+  justify-content: center;
+}
+.animate__backInRight {
+  animation-duration: 1.7s;
+}
+@media screen and (max-width: 900px) {
+  .home {
+    width: 100%;
+    margin-left: 0;
+  }
+  .empty {
+    width: 100%;
+    margin-left: 0;
+  }
+  .head-bar {
+    width: 100%;
+    margin-left: 0;
+  }
 }

@@ -6,7 +6,7 @@ import ".././index.css";
 import "animate.css";
 import SendIcon from '@mui/icons-material/Send';
 
-const HomePage = () => {
+const HomePage = (setDraweer) => {
   const ColorButton = styled(Button)(({ theme }) => ({
     color: "#fff",
     backgroundColor: theme.palette.warning.main,
@@ -15,13 +15,16 @@ const HomePage = () => {
     },
   }));
   return (
+    
     <div className="home">
       <div className="title ">
         <h1 className="animate__animated animate__swing">
           Welcome to our coffee
         </h1>
         <div className="button">
-          <ColorButton variant="contained" endIcon={<SendIcon />}>
+          <ColorButton className="animate__animated animate__backInUp" variant="contained" endIcon={<SendIcon />} onClick={() => {
+            setDraweer("block")
+          }}>
             {" "}
             Go to Our Menu
           </ColorButton>
