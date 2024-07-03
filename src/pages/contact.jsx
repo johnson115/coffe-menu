@@ -24,7 +24,7 @@ const Contact = () => {
           <h1 className="animate__animated animate__zoomInDownbox">Call us or Visit us Directly </h1>
           <p>
             <span>Phone : </span>{" "}
-            <a href="call to:+21629560974">+216 29560974</a>
+            <a href="call to:+21658401360">+216 58401360</a>
           </p>
           <p>
             <span>Adress:</span>
