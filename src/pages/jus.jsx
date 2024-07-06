@@ -37,6 +37,7 @@ const Jus = () => {
   );
 }
 
+var jwejem =require("../components/media/jwejem.jpeg");
 const itemData = [
   {
     img: 'https://images.unsplash.com/photo-1583578449206-ac0980dd77b7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGxlbW9uJTIwanVzfGVufDB8fDB8fHww',
@@ -78,7 +79,7 @@ const itemData = [
   },
   {
     img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCP3UpRpLKfHCMhiqpInEwQPHrUvZ8zToywA&s',
-    title: 'Jus aux Fruit sec',
+    title: 'Jus de Fruit-sec',
     author: ' 7.000 TND',
     cols: 2,
   },
@@ -95,10 +96,16 @@ const itemData = [
     cols: 2,
   },
   {
-    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm29TDVnmdXFsiCWFBTph3-ciGiIgbWeVYSg&s',
+    img: jwejem ,
     title: 'Jwejem',
-    author: ' 8.000 TND',
+    author: ' 9.000 TND',
     cols: 2,
+  },
+  {
+    img: "https://i.pinimg.com/originals/bf/cc/bc/bfccbc802ff664ac34b41ea1cf52a5b6.jpg",
+    title: 'Coupe glace',
+    author: ' 8.000 TND',
+    
   },
   {
     img: 'https://img.cuisineaz.com/660x660/2017/08/29/i132044-smoothie-4-fruits.jpeg',

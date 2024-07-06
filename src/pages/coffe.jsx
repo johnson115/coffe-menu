@@ -3,47 +3,68 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import '../index.css';
-import IconButton from '@mui/material/IconButton';
+
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { Box} from '@mui/material';
+
 
 
 import React from 'react';
-
+var offre = require("../components/media/offre.jpeg");
 const Coffe = () => {
   return (
-    < >
-      
+    <Box sx={{background:'linear-gradient(to right top , #f2cf8c,#7e4000,#38220f)', pt:"100px"}}>
+    <Card sx={{ maxWidth: 345 ,display:"flex" , ml:"auto", mr:"auto"}}>
+      <Box sx={{ display: 'flex', flexDirection: 'column' , width:340}}>
+        <CardContent sx={{ flex: '1 0 auto' }}>
+          <Typography component="div" variant="h5">
+            Petit Dejeuner
+          </Typography>
+          <Typography variant="subtitle1" color="text.secondary" component="div">
+            Commencer votre journée avec notre  offre
+          </Typography>
+        </CardContent>
+        </Box>
+        <CardMedia
+        component="img"
+        sx={{ width: 191  }}
+        image={offre}
+        alt="Live from space album cover"
+      />
+        </Card>
   
-    <ImageList cols={3} sx={{
-       background:'linear-gradient(to right top , #f2cf8c,#7e4000,#38220f)', 
-       width:"100%", ml:0,mt:0,padding:"40px", height: "100%", gap:"20px" }}>
-    {itemData.map((item) => (
-      <ImageListItem key={item.img}>
-      <img
-        srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-        src={`${item.img}?w=248&fit=crop&auto=format`}
-        alt={item.title}
-        loading="lazy"
-      />
-      <ImageListItemBar
-      sx={{textAlign:"center"}}
-        title={item.title}
-        subtitle={item.author}
-        actionIcon={
-          <IconButton
-            sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-            aria-label={`info about ${item.title}`}
-          >
-            
-          </IconButton>
-        }
-      />
-    </ImageListItem>
-    ))}
-    </ImageList>
+        <ImageList cols={3} sx={{
+         width:"100%",gap:"30px",
+         ml:0,mt:0,padding:"40px", height: "100%" }}>
+      {itemData.map((item) => (
+        <ImageListItem key={item.img}>
+          <img
+            srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+            src={`${item.img}?w=248&fit=crop&auto=format`}
+            alt={item.title}
+            loading="lazy"
+          />
+          <ImageListItemBar
+          sx={{textAlign:"center"}}
+            title={item.title}
+            subtitle={<span>{item.author}</span>}
+            position="below"
+          />
+        </ImageListItem>
+      ))}
+      </ImageList>
+      
     
-  </>
+  </Box>
   );
 }
+var express =require("../components/media/express.jpeg");
+var thé =require("../components/media/the-nois.jpeg");
+var special =require("../components/media/special.jpeg");
+
 const itemData = [
   {
     img: 'https://images.stockcake.com/public/b/b/e/bbe52898-7026-4a3d-a79a-b051c2e47ddb_large/steaming-coffee-cup-stockcake.jpg',
@@ -54,17 +75,13 @@ const itemData = [
     featured: true,
   },
   {
-    img: 'https://images.stockcake.com/public/7/2/3/7238e9d1-d50b-4059-8ff2-23de2dcea922_large/espresso-pouring-freshly-stockcake.jpg',
+    img: express ,
     title: 'Express ',
     author: ' 1.500 TND',
   },
+  
   {
-    img: 'https://images.unsplash.com/photo-1589224637274-2a30864d41b0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YW1lcmljYW4lMjBjb2ZmZXxlbnwwfHwwfHx8Mg%3D%3D',
-    title: 'Allonje ',
-    author: ' 1.500 TND',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1589224637274-2a30864d41b0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YW1lcmljYW4lMjBjb2ZmZXxlbnwwfHwwfHx8Mg%3D%3D',
+    img: 'https://images.unsplash.com/photo-1610817186378-e756a99b96ae?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29mZmVlJTIwbmVzY2FmJUMzJUE5fGVufDB8fDB8fHww',
     title: 'Nescafé ',
     author: ' 2.300 TND',
   },
@@ -95,6 +112,11 @@ const itemData = [
     img: 'https://cafeambiance.fr/wp-content/uploads/2022/12/cafe-noisette.jpg',
     title: 'Noisette',
     author: ' 2.300 TND',
+  },
+  {
+    img: special ,
+    title: 'Cafe special ',
+    author: ' 2.800 TND',
   },
   {
     img: 'https://images.unsplash.com/photo-1514952902821-eaf63e66c12e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWlsayUyMGN1cHxlbnwwfHwwfHx8Mg%3D%3D',
@@ -137,9 +159,9 @@ const itemData = [
     cols: 2,
   },
   {
-    img: 'https://images.unsplash.com/photo-1608744940436-5fca4a3c8786?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHJlZCUyMHRoJUMzJUE5fGVufDB8fDB8fHwy',
-    title: 'the grenadine',
-    author: ' 2.500 TND',
+    img: thé ,
+    title: 'thé au nois',
+    author: ' 3.000 TND',
   },
   {
     img: 'https://static.vecteezy.com/ti/photos-gratuite/p2/27101083-une-traditionnel-arabe-dessert-appele-baklava-avec-des-noisettes-et-mon-cheri-est-communement-apprecie-pendant-ramadan-photo.jpg',
