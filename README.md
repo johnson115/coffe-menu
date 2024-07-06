@@ -1,3 +1,8 @@
+## The Interface 
+
+![image](https://github.com/johnson115/coffe-menu/assets/60323853/af1d8ee4-2609-42c8-ab03-17544ca495e1)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
